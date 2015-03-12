@@ -2,18 +2,29 @@ if css
     style= css
 
 - var events = [ ]
-- var e = { }
 
+- var e = { }
 - e.name = "CMU [Fall 2013]"
 - e.color = "#FF0000"
+- e.column = "one"
 - e.start = new Date(2013, 8, 26)
 - e.end   = new Date(2013, 12, 9)
 - events.push(e)
 
+- e = { }
 - e.name = "CMU [Spring 2015]"
 - e.color = "#FF0000"
+- e.column = "1"
 - e.start = new Date(2015, 1, 12)
 - e.end   = new Date(2015, 5, 1)
+- events.push(e)
+
+- e = { }
+- e.name = "MetabolismFun"
+- e.color = "#00FF00"
+- e.column = "4"
+- e.start = new Date(2013, 7, 15)
+- e.end   = new Date(2015, 1, 1)
 - events.push(e)
 
 - timeline = { }
@@ -28,9 +39,6 @@ if css
 -         return 0
 -     }
 -     return 100 * (d.getTime() - timeline.start.getTime()) / timeline.duration
-- }
-- timeline.getIntervalHeight = function(d1, d2) {
--     return timeline.getHeight(d2) - timeline.getHeight(d1)
 - }
 
 div#resume
@@ -78,14 +86,17 @@ div#resume
                 - var start_year = timeline.start.getFullYear()
                 - var end_year = timeline.end.getFullYear()
                 - for (var year = start_year; year < end_year; year++)
-                    - var first_day = new Date(year, 1, 1)
-                    - var last_day = new Date(year, 12, 31)
-                    - var bottom = timeline.getHeight(first_day)
-                    - var height = timeline.getIntervalHeight(first_day, last_day)
-                    div.year(style="height:" + height + "%; bottom:" + bottom + "%")
+                    - var bottom = timeline.getHeight(new Date(year+1, 1, 1))
+                    div.year(style="bottom:" + bottom + "%")
                         div.left
                         div.right
                         p.name= year
+
+                - for (var i = 0; i < events.length; i++)
+                    - var e = events[i]
+                    - var bottom = timeline.getHeight(e.start)
+                    - var height = timeline.getHeight(e.end) - bottom
+                    div.event(style="bottom:" + bottom + "%; height:" + height + "%; background-color:" + e.color, column=e.column, test="string")
 
     div.footer
         a(href="https://www.github.com/djynth/resume" target="_blank") github.com/djynth/resume

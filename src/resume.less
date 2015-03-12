@@ -76,6 +76,7 @@
                 .year {
                     position: absolute;
                     width: 100%;
+                    height: 0;
 
                     .left, .right {
                         width: 25%;
@@ -96,6 +97,27 @@
                         text-align: center;
                         font-size: 12px;
                         line-height: 1em;
+                    }
+                }
+
+                .event {
+                    position: absolute;
+                    width: 8px;
+
+                    &[column="1"] {
+                        right: 20%;
+                    }
+
+                    &[column="2"] {
+                        right: 40%;
+                    }
+
+                    &[column="3"] {
+                        right: 60%;
+                    }
+
+                    &[column="4"] {
+                        right: 80%;
                     }
                 }
             }
