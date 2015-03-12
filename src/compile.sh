@@ -5,12 +5,20 @@ cd "$(dirname "$0")"
 function compile {
     printf "Compiling resume... "
 
-    CSS=`lessc -x main.less`
-    jade resume.jade --out ".." --obj "{ 'css' : '$CSS' }" > /dev/null
+    RESUME_CSS=`lessc -x resume.less`
+    CONTAINER_CSS=`lessc -x container.less`
+    RESUME=`jade < resume.jade`
+
+    jade --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'resume' : '$RESUME' }" < container.jade > ../resume.html
+
+    jade --obj "{ 'css' : '$RESUME_CSS' }" < resume.jade > ../embed.html
+    echo $RESUME_CSS > ../embed.css
 
     if hash wkhtmltopdf 2>/dev/null; then
-        wkhtmltopdf -q ../resume.html ../resume.pdf
+        wkhtmltopdf -q ../embed.html ../resume.pdf
     fi
+
+    echo $RESUME > ../embed.html
 
     printf "done.\n"
 }
@@ -18,8 +26,6 @@ function compile {
 compile
 
 if [ "$1" = "-w" ]; then
-    printf "Watching for changes...\n"
-
     while true; do
         inotifywait -q -q -e close_write,moved_to,create *.jade *.less
         sleep 0.1s

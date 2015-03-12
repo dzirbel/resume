@@ -1,0 +1,37 @@
+#resume {
+    font-family: Impact, Charcoal, sans-serif;
+    line-height: 1.28em;
+
+    p, h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+
+    .header {
+        float: right;
+        display: table;
+
+        .contact {
+            display: table-cell;
+            text-align: right;
+            padding-right: 8px;
+
+            .name {
+                font-weight: bold;
+                font-size: 24px;
+            }
+        }
+
+        .logo {
+            position: relative;
+            display: table-cell;
+            border-left: 1px solid black;
+            height: 100%;
+            min-width: 78px;
+
+            img {
+                position: absolute;
+                max-height: 100%;
+            }
+        }
+    }
+}
