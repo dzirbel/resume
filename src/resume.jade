@@ -1,6 +1,38 @@
 if css
     style= css
 
+- var events = [ ]
+- var e = { }
+
+- e.name = "CMU [Fall 2013]"
+- e.color = "#FF0000"
+- e.start = new Date(2013, 8, 26)
+- e.end   = new Date(2013, 12, 9)
+- events.push(e)
+
+- e.name = "CMU [Spring 2015]"
+- e.color = "#FF0000"
+- e.start = new Date(2015, 1, 12)
+- e.end   = new Date(2015, 5, 1)
+- events.push(e)
+
+- timeline = { }
+- timeline.start = new Date(2007, 1, 1)
+- timeline.end   = new Date(2015, 3, 15)
+- timeline.duration = timeline.end.getTime() - timeline.start.getTime()
+- timeline.getHeight = function(d) {
+-     if (d.getTime() >= timeline.end.getTime()) {
+-         return 100
+-     }
+-     if (d.getTime() <= timeline.start.getTime()) {
+-         return 0
+-     }
+-     return 100 * (d.getTime() - timeline.start.getTime()) / timeline.duration
+- }
+- timeline.getIntervalHeight = function(d1, d2) {
+-     return timeline.getHeight(d2) - timeline.getHeight(d1)
+- }
+
 div#resume
     div.header
         div.contact
@@ -40,5 +72,20 @@ div#resume
             li BGSU
             li SJJ
         br
+
+        div.timeline-holder
+            div.timeline
+                - var start_year = timeline.start.getFullYear()
+                - var end_year = timeline.end.getFullYear()
+                - for (var year = start_year; year < end_year; year++)
+                    - var first_day = new Date(year, 1, 1)
+                    - var last_day = new Date(year, 12, 31)
+                    - var bottom = timeline.getHeight(first_day)
+                    - var height = timeline.getIntervalHeight(first_day, last_day)
+                    div.year(style="height:" + height + "%; bottom:" + bottom + "%")
+                        div.left
+                        div.right
+                        p.name= year
+
     div.footer
         a(href="https://www.github.com/djynth/resume" target="_blank") github.com/djynth/resume
