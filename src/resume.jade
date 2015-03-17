@@ -3,16 +3,10 @@
     - events[i].end   = new Date(events[i].end)
 
 - timeline = { }
-- timeline.start = new Date(2007, 1, 1)
-- timeline.end   = new Date(2015, 3, 15)
+- timeline.start = new Date(start)
+- timeline.end   = new Date(end)
 - timeline.duration = timeline.end.getTime() - timeline.start.getTime()
 - timeline.getHeight = function(d) {
--     if (d.getTime() >= timeline.end.getTime()) {
--         return 100
--     }
--     if (d.getTime() <= timeline.start.getTime()) {
--         return 0
--     }
 -     return 100 * (d.getTime() - timeline.start.getTime()) / timeline.duration
 - }
 
@@ -49,6 +43,7 @@ div#resume
             li MetabolismFun
             li Personal Robotics
             li Agile Oasis Technologies
+            li Game of Life
         br
 
         h1 Education
@@ -65,13 +60,14 @@ div#resume
                 - for (var year = start_year; year < end_year; year++)
                     - var bottom = timeline.getHeight(new Date(year+1, 1, 1))
                     div.year(style="bottom:" + bottom + "%")
-                        p.name= year
+                        p.name= (year+1)
 
-                - for (var i = 0; i < events.length; i++)
-                    - var e = events[i]
-                    - var bottom = timeline.getHeight(e.start)
-                    - var height = timeline.getHeight(e.end) - bottom
-                    div.event(style="bottom:" + bottom + "%; height:" + height + "%; background-color:" + e.color, col=e.col)
+                div.events-holder  
+                    - for (var i = 0; i < events.length; i++)
+                        - var e = events[i]
+                        - var bottom = timeline.getHeight(e.start)
+                        - var height = timeline.getHeight(e.end) - bottom
+                        div.event(style="bottom:" + bottom + "%; height:" + height + "%; background-color:" + e.color, col=e.col, title=e.name)
 
     div.footer
         a(href="https://www.github.com/djynth/resume" target="_blank") github.com/djynth/resume
