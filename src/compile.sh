@@ -7,18 +7,14 @@ function compile {
 
     RESUME_CSS=`lessc -x resume.less`
     CONTAINER_CSS=`lessc -x container.less`
-    RESUME=`jade < resume.jade`
+    RESUME=`jade --obj timeline.json < resume.jade`
 
-    jade --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'resume' : '$RESUME' }" < container.jade > ../resume.html
-
-    jade --obj "{ 'css' : '$RESUME_CSS' }" < resume.jade > ../embed.html
-    echo $RESUME_CSS > ../embed.css
+    jade --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'resume' : '$RESUME', 'container' : true  }" < container.jade > ../resume.html
+    jade --obj "{ 'css' : '$RESUME_CSS',               'resume' : '$RESUME', 'container' : false }" < container.jade > ../embed.html
 
     if hash wkhtmltopdf 2>/dev/null; then
         wkhtmltopdf -q ../embed.html ../resume.pdf
     fi
-
-    echo $RESUME > ../embed.html
 
     printf "done.\n"
 }

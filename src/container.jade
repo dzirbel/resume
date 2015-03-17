@@ -1,7 +1,11 @@
-doctype html
-html(lang="en")
-    head
-        title Dominic Zirbel's Resume
-        style!= css
+if container
+    doctype html
+    html(lang="en")
+        head
+            title Dominic Zirbel's Resume
+            style!= css
 
-    body !{resume}
+        body !{resume}
+else
+    style!= css
+    != resume

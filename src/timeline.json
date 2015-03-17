@@ -1,0 +1,25 @@
+{
+    "events" : [
+        {
+            "name" : "CMU [Fall 2013]",
+            "color" : "#FF0000",
+            "col" : 1,
+            "start" : "2013-08-26",
+            "end" : "2013-12-09"
+        },
+        {
+            "name" : "CMU [Spring 2015]",
+            "color" : "#FF0000",
+            "col" : 1,
+            "start" : "2015-01-12",
+            "end" : "2015-05-01"
+        },
+        {
+            "name" : "MetabolismFun",
+            "color" : "00FF00",
+            "col" : 4,
+            "start" : "2013-07-15",
+            "end" : "2015-01-01"
+        }
+    ]
+}
