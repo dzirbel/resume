@@ -23,7 +23,7 @@ compile
 
 if [ "$1" = "-w" ]; then
     while true; do
-        inotifywait -q -q -e close_write,moved_to,create *.jade *.less
+        inotifywait -q -q -e close_write,moved_to,create *.jade *.less *.json
         sleep 0.1s
         compile
     done
