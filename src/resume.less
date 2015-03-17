@@ -75,49 +75,41 @@
 
                 .year {
                     position: absolute;
-                    width: 100%;
+                    right: 0;
+                    width: 110%;
+                    border-top: 1px solid @fg;
                     height: 0;
 
-                    .left, .right {
-                        width: 25%;
-                        border-top: 1px solid @fg;
-
-                    }
-
-                    .left {
-                        float: left;
-                    }
-
-                    .right {
-                        float: right;
-                    }
-
                     .name {
+                        width: 30px;
+                        text-align: left;
+                        position: absolute;
                         margin-top: -0.5em;
-                        text-align: center;
                         font-size: 12px;
                         line-height: 1em;
+                        left: -30px;
                     }
                 }
 
                 .event {
+                    @w: 10%;
                     position: absolute;
-                    width: 8px;
+                    width: @w;
 
                     &[col="1"] {
-                        right: 20%;
+                        right: 20% - (4 / 5) * @w;
                     }
 
                     &[col="2"] {
-                        right: 40%;
+                        right: 40% - (3 / 5) * @w;
                     }
 
                     &[col="3"] {
-                        right: 60%;
+                        right: 60% - (2 / 5) * @w;
                     }
 
                     &[col="4"] {
-                        right: 80%;
+                        right: 80% - (1 / 5) * @w;
                     }
                 }
             }

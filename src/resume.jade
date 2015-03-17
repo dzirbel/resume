@@ -65,8 +65,6 @@ div#resume
                 - for (var year = start_year; year < end_year; year++)
                     - var bottom = timeline.getHeight(new Date(year+1, 1, 1))
                     div.year(style="bottom:" + bottom + "%")
-                        div.left
-                        div.right
                         p.name= year
 
                 - for (var i = 0; i < events.length; i++)

@@ -16,8 +16,29 @@
         },
         {
             "name" : "MetabolismFun",
-            "color" : "00FF00",
+            "color" : "#00FF00",
             "col" : 4,
+            "start" : "2013-07-15",
+            "end" : "2015-01-01"
+        },
+        {
+            "name" : "MetabolismFun",
+            "color" : "#00FF00",
+            "col" : 2,
+            "start" : "2013-07-15",
+            "end" : "2015-01-01"
+        },
+        {
+            "name" : "MetabolismFun",
+            "color" : "#00FF00",
+            "col" : 3,
+            "start" : "2013-07-15",
+            "end" : "2015-01-01"
+        },
+        {
+            "name" : "MetabolismFun",
+            "color" : "#00FF00",
+            "col" : 1,
             "start" : "2013-07-15",
             "end" : "2015-01-01"
         }
