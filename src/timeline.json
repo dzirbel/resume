@@ -1,89 +1,105 @@
 {
     "start" : "2009-04-01",
     "end" : "2015-04-01",
+    "event_colors" : {
+        "cmu" : "#990000",
+        "pr" : "#E66101",
+        "aot" : "#404040",
+        "mf" : "#C5C5C5",
+        "gol" : "#0E8825",
+        "bgsu" : "#4F2C1D",
+        "sjj" : "#003b81",
+        "putnam" : "#F7FA24"
+    },
     "events" : [
         {
             "name" : "CMU [Fall 2013]",
-            "color" : "#990000",
+            "color" : "cmu",
             "col" : 1,
             "start" : "2013-08-26",
             "end" : "2013-12-09"
         },
         {
             "name" : "CMU [Spring 2015]",
-            "color" : "#990000",
+            "color" : "cmu",
             "col" : 1,
             "start" : "2015-01-12",
             "end" : "2015-05-01"
         },
         {
             "name" : "Personal Robotics",
-            "color" : "#E66101",
+            "color" : "pr",
             "col" : 3,
             "start" : "2012-05-25",
             "end" : "2012-08-10"
         },
         {
             "name" : "Agile Oasis Technologies",
-            "color" : "#404040",
+            "color" : "aot",
             "col" : 3,
             "start" : "2013-05-15",
             "end" : "2013-08-10"
         },
         {
             "name" : "MetabolismFun",
-            "color" : "#C5C5C5",
+            "color" : "mf",
             "col" : 4,
             "start" : "2013-07-15",
             "end" : "2015-01-01"
         },
         {
             "name" : "Game of Life",
-            "color" : "#0E8825",
+            "color" : "gol",
             "col" : 4,
             "start" : "2009-06-01",
             "end" : "2013-05-14"
+        },
+        {
+            "name" : "Putnam 2013",
+            "color" : "putnam",
+            "col" : 2,
+            "date" : "2013-12-01"
         },
 
 
         {
             "name" : "BGSU [Summer 2009]",
-            "color" : "#4F2C1D",
+            "color" : "bgsu",
             "col" : 2,
             "start" : "2009-06-01",
             "end" : "2009-08-10"
         },
         {
             "name" : "BGSU [Fall 2009]",
-            "color" : "#4F2C1D",
+            "color" : "bgsu",
             "col" : 2,
             "start" : "2009-08-20",
             "end" : "2009-12-15"
         },
         {
             "name" : "BGSU [Summer 2010]",
-            "color" : "#4F2C1D",
+            "color" : "bgsu",
             "col" : 2,
             "start" : "2010-06-01",
             "end" : "2010-08-10"
         },
         {
             "name" : "BGSU [Summer 2011]",
-            "color" : "#4F2C1D",
+            "color" : "bgsu",
             "col" : 2,
             "start" : "2011-06-01",
             "end" : "2011-08-10"
         },
         {
             "name" : "BGSU [Summer 2012]",
-            "color" : "#4F2C1D",
+            "color" : "bgsu",
             "col" : 2,
             "start" : "2012-06-01",
             "end" : "2012-08-10"
         },
         {
             "name" : "BGSU [Fall 2012]",
-            "color" : "#4F2C1D",
+            "color" : "bgsu",
             "col" : 2,
             "start" : "2012-08-20",
             "end" : "2012-12-15"
@@ -91,28 +107,28 @@
 
         {
             "name" : "Saint Johns Jesuit [9th Grade]",
-            "color" : "#003b81",
+            "color" : "sjj",
             "col" : 1,
             "start" : "2009-08-15",
             "end" : "2010-05-15"
         },
         {
             "name" : "Saint Johns Jesuit [10th Grade]",
-            "color" : "#003b81",
+            "color" : "sjj",
             "col" : 1,
             "start" : "2010-08-15",
             "end" : "2011-05-15"
         },
         {
             "name" : "Saint Johns Jesuit [11th Grade]",
-            "color" : "#003b81",
+            "color" : "sjj",
             "col" : 1,
             "start" : "2011-08-15",
             "end" : "2012-05-15"
         },
         {
             "name" : "Saint Johns Jesuit [12th Grade]",
-            "color" : "#003b81",
+            "color" : "sjj",
             "col" : 1,
             "start" : "2012-08-15",
             "end" : "2013-05-15"

@@ -1,6 +1,9 @@
 - for (var i = 0; i < events.length; i++)
-    - events[i].start = new Date(events[i].start)
-    - events[i].end   = new Date(events[i].end)
+    - if (events[i].date)
+        - events[i].date = new Date(events[i].date)
+    - else
+        - events[i].start = new Date(events[i].start)
+        - events[i].end   = new Date(events[i].end)
 
 - timeline = { }
 - timeline.start = new Date(start)
@@ -9,6 +12,12 @@
 - timeline.getHeight = function(d) {
 -     return 100 * (d.getTime() - timeline.start.getTime()) / timeline.duration
 - }
+
+mixin timeline-icon(color)
+    i.timeline-icon(style="background-color:" + event_colors[color])
+
+mixin a(href, name)
+    a(href=href, target="_blank")= name
 
 div#resume
     div.header
@@ -32,25 +41,43 @@ div#resume
                 ul
                     li C/C++
                     li Linux
+                    li Git
                     li Python
-            li Math
+            li Mathematics
                 ul
-                    li 2013 Putnam Score: 10
+                    li 2013
+                        +timeline-icon("putnam")
+                        +a("http://math.scu.edu/putnam/index.html", "Putnam ")
+                        | Score: 10
         br
 
         h1 Experience
         ul
-            li MetabolismFun
-            li Personal Robotics
-            li Agile Oasis Technologies
-            li Game of Life
+            li
+                +timeline-icon("mf")
+                +a("http://www.metabolismfun.com/", "MetabolismFun")
+            li
+                +timeline-icon("pr")
+                +a("https://personalrobotics.ri.cmu.edu/", "Personal Robotics")
+            li
+                +timeline-icon("aot")
+                +a("http://agileoasis.com/", "Agile Oasis Technologies")
+            li
+                +timeline-icon("gol")
+                +a("https://github.com/djynth/Game-of-Life", "Game of Life")
         br
 
         h1 Education
         ul
-            li CMU
-            li BGSU
-            li SJJ
+            li
+                +timeline-icon("cmu")
+                | Carnegie Mellon University
+            li
+                +timeline-icon("bgsu")
+                | Bowling Green State University
+            li
+                +timeline-icon("sjj")
+                | Saint John&apos;s Jesuit High School
         br
 
         div.timeline-holder
@@ -65,9 +92,13 @@ div#resume
                 div.events-holder  
                     - for (var i = 0; i < events.length; i++)
                         - var e = events[i]
-                        - var bottom = timeline.getHeight(e.start)
-                        - var height = timeline.getHeight(e.end) - bottom
-                        div.event(style="bottom:" + bottom + "%; height:" + height + "%; background-color:" + e.color, col=e.col, title=e.name)
+                        - if (e.date)
+                            - var bottom = timeline.getHeight(e.date) - 0.5
+                            - var height = 1
+                        - else
+                            - var bottom = timeline.getHeight(e.start)
+                            - var height = timeline.getHeight(e.end) - bottom
+                        div.event(style="bottom:" + bottom + "%; height:" + height + "%; background-color:" + event_colors[e.color], col=e.col, title=e.name)
 
     div.footer
-        a(href="https://www.github.com/djynth/resume" target="_blank") github.com/djynth/resume
+        +a("https://www.github.com/djynth/resume", "github.com/djynth/resume")

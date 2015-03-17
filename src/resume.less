@@ -15,10 +15,25 @@
         margin: 0;
     }
 
+    a:hover {
+        color: #0F418B;
+    }
+
+    .timeline-icon {
+        display: inline-block;
+        width: 0.7em;
+        height: 0.7em;
+        margin: 0.15em 0.3em 0;
+        border: 1px solid black;
+        border-radius: 2px;
+    }
+
     .header {
         float: right;
         display: table;
         margin-right: -20px;
+        position: relative;
+        z-index: 10;
 
         .contact {
             display: table-cell;
@@ -50,6 +65,7 @@
         position: relative;
         border-bottom: 1px solid black;
         padding-bottom: 30px;
+        padding-right: 250px;
 
         h1 {
             font-size: 24px;
@@ -60,9 +76,9 @@
             position: absolute;
             right: 0;
             bottom: 0;
-            padding-top: 135px;
+            padding-top: 100px;
             box-sizing: border-box;
-            width: 105px;
+            width: 145px;
             height: 100%;
 
             .timeline {
@@ -76,7 +92,7 @@
                 .year {
                     position: absolute;
                     right: 0;
-                    width: 110%;
+                    width: 106%;
                     border-top: 1px solid @fg;
                     height: 0;
 
@@ -98,11 +114,12 @@
                     height: 100%;
 
                     .event {
-                        @w: 10%;
+                        @w: 12%;
                         position: absolute;
                         width: @w;
                         border-radius: 2px;
                         border: 1px solid @fg;
+                        min-height: 2px;
 
                         &[col="1"] {
                             right: 20% - (4 / 5) * @w;
