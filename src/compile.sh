@@ -12,6 +12,7 @@ function compile {
     jade --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'resume' : '$RESUME', 'container' : true  }" < container.jade > ../resume.html
     jade --obj "{ 'css' : '$RESUME_CSS',               'resume' : '$RESUME', 'container' : false }" < container.jade > ../embed.html
 
+    cat ../resume.html > ../index.html
     if hash wkhtmltopdf 2>/dev/null; then
         wkhtmltopdf -q ../embed.html ../resume.pdf
     fi
