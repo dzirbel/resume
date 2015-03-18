@@ -106,7 +106,7 @@ div#resume
                 - var start_year = timeline.start.getFullYear()
                 - var end_year = timeline.end.getFullYear()
                 - for (var year = start_year; year < end_year; year++)
-                    - var bottom = timeline.getHeight(new Date(year, 12, 31))
+                    - var bottom = timeline.getHeight(new Date(year+1, 0, 1))
                     div.year(style="bottom:" + bottom + "%")
                         p.name= (year+1)
 
