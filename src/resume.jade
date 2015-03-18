@@ -89,7 +89,7 @@ div#resume
                 +timeline-icon("cmu")
                 | Carnegie Mellon University
                 ul
-                    li Current sophomore in the Mellon College of Science, majoring in Mathematics.
+                    li Current sophomore in the Mellon College of Science, majoring in Mathematics with a minor or possible double major in Computer Science.
             li
                 +timeline-icon("bgsu")
                 | Bowling Green State University
@@ -99,6 +99,8 @@ div#resume
             li
                 +timeline-icon("sjj")
                 | Saint John&apos;s Jesuit High School
+                ul
+                    li Graduated in 2013 as Valedictorian with a cumulative GPA of 4.8.
         br
 
         div.timeline-holder
@@ -106,7 +108,7 @@ div#resume
                 - var start_year = timeline.start.getFullYear()
                 - var end_year = timeline.end.getFullYear()
                 - for (var year = start_year; year < end_year; year++)
-                    - var bottom = timeline.getHeight(new Date(year+1, 1, 1))
+                    - var bottom = timeline.getHeight(new Date(year, 12, 31))
                     div.year(style="bottom:" + bottom + "%")
                         p.name= (year+1)
 
