@@ -2,14 +2,14 @@
     "start" : "2009-04-01",
     "end" : "2015-04-01",
     "event_colors" : {
-        "cmu" : "#FF4136",
-        "pr" : "#FF851B",
-        "aot" : "#404040",
-        "mf" : "#AAAAAA",
-        "gol" : "#2ECC40",
-        "bgsu" : "#823A11",
-        "sjj" : "#0074D9",
-        "putnam" : "#FFDC00"
+        "cmu"    : "#FF0033",
+        "pr"     : "#FF6600",
+        "aot"    : "#991EFF",
+        "mf"     : "#808080",
+        "gol"    : "#339933",
+        "bgsu"   : "#8B4513",
+        "sjj"    : "#3300FF",
+        "putnam" : "#CDAD00"
     },
     "events" : [
         {

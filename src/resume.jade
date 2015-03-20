@@ -33,7 +33,7 @@ div#resume
                     li HTML, CSS (Compass, LESS), jQuery
                     li node.js, PHP (Yii, Zend)
                     li SQL (MySQL), NoSQL (MongoDB)
-                    li Design
+                    li Amateur Interface Design
             li Native Android Development
             li Assorted Programming
                 ul
@@ -92,7 +92,7 @@ div#resume
                 +timeline-icon("bgsu")
                 +a("http://www.bgsu.edu/", "Bowling Green State University")
                 ul
-                    li I took many mathematics classes during high school at BGSU.
+                    li I took many mathematics classes during high school at BGSU, including advanced Probability/Statistics and Masters level Analysis.
                     li Cumulative GPA: 4.0
             li
                 +timeline-icon("sjj")
@@ -109,6 +109,8 @@ div#resume
                     - var bottom = timeline.getHeight(new Date(year+1, 0, 1))
                     div.year(style="bottom:" + bottom + "%")
                         p.name= (year+1)
+                div.year(style="bottom:100%")
+                    p.name Now
 
                 div.events-holder  
                     - for (var i = 0; i < events.length; i++)
