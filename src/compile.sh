@@ -5,9 +5,9 @@ cd "$(dirname "$0")"
 function compile {
     printf "Compiling resume... "
 
-    RESUME_CSS=`lessc -x resume.less`
-    CONTAINER_CSS=`lessc -x container.less`
-    RESUME=`jade --obj timeline.json < resume.jade`
+    RESUME_CSS=`lessc -x resume.less | sed -f parse-apos.sed`
+    CONTAINER_CSS=`lessc -x container.less | sed -f parse-apos.sed`
+    RESUME=`jade --obj timeline.json < resume.jade | sed -f parse-apos.sed`
 
     jade --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'resume' : '$RESUME', 'container' : true  }" < container.jade > ../resume.html
     jade --obj "{ 'css' : '$RESUME_CSS',               'resume' : '$RESUME', 'container' : false }" < container.jade > ../embed.html

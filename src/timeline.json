@@ -106,28 +106,28 @@
         },
 
         {
-            "name" : "Saint Johns Jesuit [9th Grade]",
+            "name" : "Saint John's Jesuit [9th Grade]",
             "color" : "sjj",
             "col" : 1,
             "start" : "2009-08-15",
             "end" : "2010-05-15"
         },
         {
-            "name" : "Saint Johns Jesuit [10th Grade]",
+            "name" : "Saint John's Jesuit [10th Grade]",
             "color" : "sjj",
             "col" : 1,
             "start" : "2010-08-15",
             "end" : "2011-05-15"
         },
         {
-            "name" : "Saint Johns Jesuit [11th Grade]",
+            "name" : "Saint John's Jesuit [11th Grade]",
             "color" : "sjj",
             "col" : 1,
             "start" : "2011-08-15",
             "end" : "2012-05-15"
         },
         {
-            "name" : "Saint Johns Jesuit [12th Grade]",
+            "name" : "Saint John's Jesuit [12th Grade]",
             "color" : "sjj",
             "col" : 1,
             "start" : "2012-08-15",
