@@ -1,6 +1,6 @@
 {
     "start" : "2009-04-01",
-    "end" : "2015-04-01",
+    "end" : "2016-02-01",
     "event_colors" : {
         "cmu"    : "#FF0033",
         "pr"     : "#FF6600",
@@ -27,6 +27,20 @@
             "end" : "2015-05-01"
         },
         {
+            "name" : "CMU [Fall 2015]",
+            "color" : "cmu",
+            "col" : 1,
+            "start" : "2015-08-31",
+            "end" : "2015-12-20"
+        },
+        {
+            "name" : "CMU [Spring 2016]",
+            "color" : "cmu",
+            "col" : 1,
+            "start" : "2016-01-11",
+            "end" : "2016-05-09"
+        },
+        {
             "name" : "Personal Robotics",
             "color" : "pr",
             "col" : 3,
@@ -34,11 +48,18 @@
             "end" : "2012-08-10"
         },
         {
-            "name" : "Agile Oasis Technologies",
+            "name" : "Agile Oasis Technologies [Summer 2013]",
             "color" : "aot",
             "col" : 3,
             "start" : "2013-05-15",
             "end" : "2013-08-10"
+        },
+        {
+            "name" : "Agile Oasis Technologies [Summer 2015]",
+            "color" : "aot",
+            "col" : 3,
+            "start" : "2015-05-18",
+            "end" : "2015-08-14"
         },
         {
             "name" : "MetabolismFun",
@@ -59,6 +80,12 @@
             "color" : "putnam",
             "col" : 2,
             "date" : "2013-12-01"
+        },
+        {
+            "name" : "Putnam 2015",
+            "color" : "putnam",
+            "col" : 2,
+            "date" : "2015-12-05"
         },
 
 
@@ -91,11 +118,11 @@
             "end" : "2011-08-10"
         },
         {
-            "name" : "BGSU [Summer 2012]",
+            "name" : "BGSU [Spring 2012]",
             "color" : "bgsu",
             "col" : 2,
-            "start" : "2012-06-01",
-            "end" : "2012-08-10"
+            "start" : "2012-01-10",
+            "end" : "2012-05-15"
         },
         {
             "name" : "BGSU [Fall 2012]",
