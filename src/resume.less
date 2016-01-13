@@ -8,20 +8,20 @@
     font-family: Lato, Helvetica, sans-serif;
 
     p, h1, h2, h3, h4, h5, h6, a, li {
-        text-decoration: none;
         color: inherit;
-    }
-
-    .bold {
-        font-weight: bold;
     }
 
     p, a, ul {
         margin: 0;
     }
 
+    a {
+        text-decoration: underline;
+    }
+
     h1 {
         font-size: 22px;
+        font-weight: bold;
         line-height: 1.35em;
         margin: 0;
     }
@@ -57,6 +57,10 @@
         position: relative;
         padding-bottom: 20px;
         padding-right: 210px;
+
+        > h1 {
+            border-bottom: 1px solid black;
+        }
 
         > ul {
             list-style-type: none;
