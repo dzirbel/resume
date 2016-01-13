@@ -2,7 +2,7 @@
 
 #resume {
     position: relative;
-    line-height: 1.32em;
+    line-height: 1.18em;
     color: @fg;
     font-family: Lato, Helvetica, sans-serif;
     font-size: 14px;
@@ -34,9 +34,10 @@
         display: inline-block;
         width: 0.7em;
         height: 0.7em;
-        margin: 0.15em 0.3em 0;
+        margin-top: 0.3em;
+        margin-right: 0.25em;
         border: 1px solid black;
-        border-radius: 2px;
+        border-radius: 1px;
     }
 
     .header {
@@ -51,19 +52,56 @@
     .content {
         position: relative;
         padding-bottom: 20px;
-        padding-right: 190px;
+        padding-right: 180px;
 
         > h1 {
             border-bottom: 1px solid black;
             padding-bottom: 5px;
-            margin-bottom: 8px;
+
+            &:not(:first-of-type) {
+                margin-top: 25px;
+            }
         }
 
-        > ul {
-            list-style-type: none;
+        .cols {
+            padding-top: 16px;
+            padding-left: 6px;
+            clear: left;
+            @lSize: 140px;
 
-            > li {
-                margin-left: -10px;
+            p {
+                margin-bottom: 5px;
+            }
+
+            .left {
+                float: left;
+                height: 100%;
+                width: @lSize - 7px;
+                text-align: right;
+                padding-right: 7px;
+                border-right: 1px solid black;
+
+                .title {
+                    font-variant: small-caps;
+                    margin-bottom: 7px;
+                    line-height: 1.3em;
+                }
+
+                .subtitle, .date {
+                    font-size: 12px;
+                    margin-bottom: 3px;
+                }
+
+                .subtitle {
+                    font-style: italic;
+                }
+            }
+
+            .right {
+                margin-left: @lSize;
+                padding-left: 7px;
+                border-left: 1px solid black;
+                font-size: 12px;
             }
         }
 
@@ -138,6 +176,6 @@
     .footer {
         width: 100%;
         text-align: center;
-        padding: 25px 0 30px;
+        padding-top: 35px;
     }
 }
