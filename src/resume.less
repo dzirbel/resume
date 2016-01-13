@@ -2,10 +2,10 @@
 
 #resume {
     position: relative;
-    line-height: 1.38em;
-    padding: 95px 35px;
+    line-height: 1.32em;
     color: @fg;
     font-family: Lato, Helvetica, sans-serif;
+    font-size: 14px;
 
     p, h1, h2, h3, h4, h5, h6, a, li {
         color: inherit;
@@ -20,10 +20,10 @@
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
-        line-height: 1.35em;
         margin: 0;
+        font-variant: small-caps;
     }
 
     a:hover {
@@ -60,6 +60,8 @@
 
         > h1 {
             border-bottom: 1px solid black;
+            padding-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         > ul {
@@ -76,7 +78,7 @@
             bottom: 0;
             padding-top: 85px;
             box-sizing: border-box;
-            width: 140px;
+            width: 125px;
             height: 100%;
 
             .timeline {
@@ -110,10 +112,10 @@
                     height: 100%;
 
                     .event {
-                        @w: 12%;
+                        @w: 15%;
                         position: absolute;
                         width: @w;
-                        border-radius: 2px;
+                        border-radius: 1px;
                         border: 1px solid @fg;
                         min-height: 2px;
 
