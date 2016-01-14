@@ -16,7 +16,7 @@ function compile {
 
     cat ../resume.html > ../index.html
     if hash wkhtmltopdf 2>/dev/null; then
-        wkhtmltopdf -q ../pdf.html ../resume.pdf
+        wkhtmltopdf -q ../pdf.html ../resume.pdf --page-size Letter
     fi
     rm ../pdf.html
 
