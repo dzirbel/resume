@@ -1,8 +1,9 @@
 {
     "start" : "2009-04-01",
-    "end" : "2016-02-01",
+    "end" : "2016-09-01",
     "event_colors" : {
         "cmu"    : "#FF0033",
+        "ist"    : "#318DF7",
         "pr"     : "#FF6600",
         "aot"    : "#991EFF",
         "mf"     : "#808080",
@@ -39,6 +40,21 @@
             "col" : 1,
             "start" : "2016-01-11",
             "end" : "2016-05-09"
+        },
+        {
+            "name" : "CMU [Fall 2016]",
+            "color" : "cmu",
+            "col" : 1,
+            "start" : "2016-08-29",
+            "end" : "2016-12-21"
+        },
+
+        {
+            "name" : "Imaging System Technology",
+            "color" : "ist",
+            "col" : 3,
+            "start" : "2016-05-31",
+            "end" : "2016-08-19"
         },
         {
             "name" : "Personal Robotics",
