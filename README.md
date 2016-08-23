@@ -4,7 +4,7 @@ A complete resume designed to present a showcase of my experience and skills. Th
 
 To compile the resume from the source, run `src/compile.sh`. Requires [Jade](http://jade-lang.com/), [Less](http://lesscss.org/), [wkhtmltopdf](http://wkhtmltopdf.org/), and [less-plugin-clean-css](https://github.com/less/less-plugin-clean-css).
 
-Last updated January 2016.
+Last updated August 2016.
 
 #### License
 
