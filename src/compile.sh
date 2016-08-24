@@ -16,7 +16,7 @@ function compile {
 
     cat ../resume.html > ../index.html
     if hash wkhtmltopdf 2>/dev/null; then
-        wkhtmltopdf -q --page-size Letter ../pdf.html ../resume.pdf
+        wkhtmltopdf -q --page-size Letter --dpi 96 --title "Dominic Zirbel's Resume" ../pdf.html ../resume.pdf
     fi
     rm ../pdf.html
 
