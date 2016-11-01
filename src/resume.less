@@ -2,7 +2,7 @@
 
 #resume {
     position: relative;
-    line-height: 1.18em;
+    line-height: 1.25em;
     color: @fg;
     font-family: Lato, Helvetica, sans-serif;
     font-size: 14px;
@@ -34,8 +34,10 @@
         display: inline-block;
         width: 0.7em;
         height: 0.7em;
-        margin-top: 0.3em;
-        margin-right: 0.25em;
+        margin-top: 0.4em;
+        margin-bottom: -0.1em;
+        margin-right: 0.3em;
+        margin-left: 0.075em;
         border: 1px solid black;
         border-radius: 1px;
     }
@@ -58,10 +60,10 @@
 
         > h1 {
             border-bottom: 1px solid black;
-            padding-bottom: 5px;
+            padding-bottom: 4px;
 
             &:not(:first-of-type) {
-                margin-top: 25px;
+                margin-top: 12px;
             }
         }
 
@@ -88,7 +90,7 @@
                 border-right: 1px solid black;
 
                 .title {
-                    font-variant: small-caps;
+                    font-variant: small-caps !important;
                     line-height: 1.3em;
                 }
 
@@ -106,7 +108,7 @@
                 }
 
                 .date {
-                    margin-bottom: 2px;
+                    margin-bottom: 3px;
                 }
             }
 
@@ -114,7 +116,7 @@
                 width: 100%;
                 margin-left: @lSize;
                 padding-left: 7px;
-                font-size: 12px;
+                font-size: 13px;
             }
         }
 
@@ -189,6 +191,6 @@
     .footer {
         width: 100%;
         text-align: center;
-        padding-top: 35px;
+        padding-top: 25px;
     }
 }
