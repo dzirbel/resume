@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd "$(dirname "$0")"
-TITLE="TITLE TODO"
+TITLE="Cover Letter | Dominic Zirbel"
 
 function compile {
     printf "Compiling cover letters... "
