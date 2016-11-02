@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cd "$(dirname "$0")"
+TITLE1="Dominic Zirbel\\'s Resume"
+TITLE2="Dominic Zirbel's Resume"
 
 function compile {
     printf "Compiling resume... "
@@ -10,13 +12,13 @@ function compile {
     PDF_CSS=`lessc pdf.less --clean-css="-s0 --advanced" | sed -f parse-apos.sed`
     RESUME=`pug --obj timeline.json < resume.jade | sed -f parse-apos.sed`
 
-    pug --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'resume' : '$RESUME', 'container' : true  }" < container.jade > ../resume.html
-    pug --obj "{ 'css' : '$RESUME_CSS',               'resume' : '$RESUME', 'container' : false }" < container.jade > ../embed.html
-    pug --obj "{ 'css' : '$RESUME_CSS$PDF_CSS'      , 'resume' : '$RESUME', 'container' : false }" < container.jade > ../pdf.html
+    pug --obj "{ 'css' : '$RESUME_CSS$CONTAINER_CSS', 'content' : '$RESUME', 'container' : true,  'title' : '$TITLE1' }" < container.jade > ../resume.html
+    pug --obj "{ 'css' : '$RESUME_CSS',               'content' : '$RESUME', 'container' : false, 'title' : '$TITLE1' }" < container.jade > ../embed.html
+    pug --obj "{ 'css' : '$RESUME_CSS$PDF_CSS',       'content' : '$RESUME', 'container' : false, 'title' : '$TITLE1' }" < container.jade > ../pdf.html
 
     cat ../resume.html > ../index.html
     if hash wkhtmltopdf 2>/dev/null; then
-        wkhtmltopdf -q --page-size Letter --dpi 96 --title "Dominic Zirbel's Resume" ../pdf.html ../resume.pdf
+        wkhtmltopdf -q --page-size Letter --dpi 96 --title "$TITLE2" ../pdf.html ../resume.pdf
     fi
     rm ../pdf.html
 

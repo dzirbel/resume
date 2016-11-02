@@ -2,10 +2,10 @@ if container
     doctype html
     html(lang="en")
         head
-            title Dominic Zirbel's Resume
+            title !{title}
             style!= css
 
-        body !{resume}
+        body !{content}
 else
     style!= css
-    != resume
+    != content

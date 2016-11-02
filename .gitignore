@@ -1,4 +1,6 @@
 *.sublime-project
 *.sublime-workspace
 node_modules
-/latex
+/src/cover_letters/*.html
+/src/cover_letters/*.jade
+/src/cover_letters/*.pdf
