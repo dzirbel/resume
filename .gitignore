@@ -1,6 +1,6 @@
 *.sublime-project
 *.sublime-workspace
 node_modules
-/src/cover_letters/*.html
-/src/cover_letters/*.jade
-/src/cover_letters/*.pdf
+/v1/src/cover_letters/*.html
+/v1/src/cover_letters/*.jade
+/v1/src/cover_letters/*.pdf
