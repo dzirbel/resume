@@ -1,0 +1,156 @@
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[pdftex]{hyperref}
+\usepackage{multicol}
+\usepackage{geometry}
+
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\geometry{letterpaper, portrait, margin=.7in}
+
+\setlength\parindent{0pt}
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{8pt}
+
+\newcommand{\resumehref}[2]{\href[pdfnewwindow=true]{#1}{\underline{\smash{#2}}}}
+
+\newenvironment{resumecols1}[1]
+{
+    \vspace{.075cm}
+    \begin{minipage}[t]{.22\textwidth}
+        \begin{flushright}
+            \textsc{#1}
+        \end{flushright}
+    \end{minipage}
+    \hspace{.005\textwidth}
+    \begin{minipage}[t]{.7625\textwidth}
+        \begin{flushleft}
+}
+{
+        \end{flushleft}
+    \end{minipage}
+    \vspace{.075cm}
+}
+
+\newenvironment{resumecols2}[2]
+{
+    \vspace{.075cm}
+    \begin{minipage}[t]{.22\textwidth}
+        \begin{flushright}
+            \textsc{#1} \\
+            \small{#2}
+        \end{flushright}
+    \end{minipage}
+    \hspace{.005\textwidth}
+    \begin{minipage}[t]{.7625\textwidth}
+        \begin{flushleft}
+}
+{
+        \end{flushleft}
+    \end{minipage}
+    \vspace{.075cm}
+}
+
+\newenvironment{resumecols}[3]
+{
+    \vspace{.075cm}
+    \begin{minipage}[t]{.22\textwidth}
+        \begin{flushright}
+            \textsc{#1} \\
+            \small{\textit{#2}} \\
+            \small{#3}
+        \end{flushright}
+    \end{minipage}
+    \hspace{.005\textwidth}
+    \begin{minipage}[t]{.7625\textwidth}
+        \begin{flushleft}
+}
+{
+        \end{flushleft}
+    \end{minipage}
+    \vspace{.075cm}
+}
+
+\begin{document}
+
+\begin{flushright}
+    \textbf{\large{Dominic Zirbel}} \\
+    \href{mailto:dominiczirbel@gmail.com}{dominiczirbel@gmail.com} \\
+    412 204 7462
+\end{flushright}
+
+\section{Skills}
+
+\begin{resumecols1}{Native Android Engineering}
+    In depth knowledge of the Java API; experience with Kotlin, Gradle, Instant Apps \\
+    Worked with common industry standards such as dependency injection
+\end{resumecols1}
+
+\begin{resumecols1}{Full-Stack Web Development}
+    Frontend: JavaScript (jQuery), HTML (Jade), CSS (Compass, LESS) \\
+    Backend: PHP (Yii2, Zend), SQL, some Node.js and Python
+\end{resumecols1}
+
+\begin{resumecols1}{Programming}
+    Java, C/C++, Python: solid foundation in the style and uses of these languages \\
+    Software Design: experience and training in maintaining large projects \\
+    Linux: day-to-day usage with top-level components (command line, scripting, Git)
+\end{resumecols1}
+
+\begin{resumecols1}{Mathematics}
+    Strong academic core with a focus on Abstract Algebra and Combinatorics \\
+    Analytical thinking, problem solving, and abstract reasoning \\
+\end{resumecols1}
+
+\section{Experience}
+
+\begin{resumecols}{Thumbtack}{Software Engineer Intern}{Summer 2017}
+    Rebuilt the sign in flow in the Thumbtack customer Android app from the ground up. Most notably, I added account creation and Facebook login options, as well as modernizing the UI and running experiments on how aggressively to prompt for login. \\
+    \vspace{4pt}
+    I was on the forefront of transitioning the app to a reactive paradigm with RxJava and translating Java code to Kotlin. I fleshed out existing solutions and added my own ideas, learning alongside the rest of the team. \\
+\end{resumecols}
+
+\begin{resumecols}{Imaging Systems Technology}{Intern}{Summer 2016}
+    Developed an Android tablet app to monitor and control a manufacturing process in order to fine tune the system. The app gathered live data via Bluetooth; tracked averages, regressions, and errors; displayed realtime graphs; and kept logs of past runs. \\
+    \vspace{4pt}
+    I used the native Java SDK and focused on handling large amounts of data in an extensible way and finding useful ways to present it to the team.
+\end{resumecols}
+
+\begin{resumecols}{MetabolismFun}{Full-Stack Web Engineer}{July 2013 - Jan 2015}
+    Created the online, turn-based educational game \resumehref{http://metabolismfun.com/}{MetabolismFun} which allows the player to learn metabolic pathways in an engaging, interactive way. \\
+    \vspace{4pt}
+    I worked one-on-one with Dr. Neocles Leontis at BGSU to develop the website to teach cellular metabolism in his classes and beyond. I was responsible for programming, design, and deployment and used Yii2, MySQL, and jQuery.
+\end{resumecols}
+
+\begin{resumecols}{Agile Oasis Technologies}{Web Developer Intern}{Summer 2015, 2013}
+    Summer 2015: Developed the social network site \resumehref{http://www.projectqi.com/}{Project Qi} which aims to connect users to non-profit organizations. I used Yii2, MySQL, Bootstrap, and jQuery and worked closely with the client to create the experience he had in mind. \\
+    \vspace{4pt}
+    Summer 2013: Designed and built the frontend for a variety of contracted websites.
+\end{resumecols}
+
+\begin{resumecols}{Personal Robotics}{Intern}{Summer 2012}
+    Designed an Android application for in-house use on the humanoid robot HERB. The app provided a simple interface for normally difficult tasks such as adjusting motor position, displaying sensor output, or sending a direct command.
+\end{resumecols}
+
+\section{Education}
+
+\begin{resumecols2}{Carnegie Mellon University}{2013 - 2018 (Expected)}
+    Senior in the Mellon College of Science, double majoring in Mathematics and Computer Science with a cumulative GPA (as of Fall 2017) of 3.31
+\end{resumecols2}
+
+\begin{resumecols2}{Saint John's Jesuit}{High School; 2009-2013}
+    Graduated as Valedictorian with a 4.8 cumulative GPA on a 4-point scale \\
+    \vspace{4pt}
+    Took classes at Bowling Green State University during high school equivalent to a Mathematics minor, with a cumulative GPA of 4.0
+\end{resumecols2}
+
+\end{document}
