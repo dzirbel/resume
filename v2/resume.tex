@@ -5,13 +5,13 @@
 \usepackage{geometry}
 \usepackage{titlesec}
 
-\geometry{letterpaper, portrait, margin=.8in}
+\geometry{letterpaper, portrait, margin=.85in}
 
 \setlength\parindent{0pt}
 \hyphenpenalty=10000
 
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{12pt}{8pt}
+\titlespacing{\section}{0pt}{10pt}{10pt}
 
 % standard line break in content paragraph
 \newcommand{\lb}{\vspace{4pt} \\}
@@ -19,7 +19,7 @@
 % TODO: consolidate these resumecols commands
 \newenvironment{resumecols1}[1]
 {
-    \vspace{.11cm}
+    \vspace{.1cm}
     \begin{minipage}[t]{.21\linewidth}
         \begin{flushright}
             \textsc{#1}
@@ -30,12 +30,12 @@
 }
 {
     \end{minipage}
-    \vspace{.11cm}
+    \vspace{.1cm}
 }
 
 \newenvironment{resumecols2}[2]
 {
-    \vspace{.11cm}
+    \vspace{.1cm}
     \begin{minipage}[t]{.21\linewidth}
         \begin{flushright}
             \textsc{#1} \\
@@ -47,12 +47,12 @@
 }
 {
     \end{minipage}
-    \vspace{.11cm}
+    \vspace{.1cm}
 }
 
 \newenvironment{resumecols}[4]
 {
-    \vspace{.11cm}
+    \vspace{.1cm}
     \begin{minipage}[t]{.21\linewidth}
         \begin{flushright}
             \href{#2}{\textsc{#1}} \\
@@ -65,7 +65,7 @@
 }
 {
     \end{minipage}
-    \vspace{.11cm}
+    \vspace{.1cm}
 }
 
 \begin{document}
@@ -75,18 +75,58 @@
 %%%%%%%%%%%%%%
 %%% HEADER %%%
 %%%%%%%%%%%%%%
-\begin{minipage}[t]{.5\linewidth}
-    \vspace{0pt}
-    \textbf{\Large{Dominic Zirbel}}
-\end{minipage}
-\begin{minipage}[t]{.49\linewidth}
-    \vspace{0pt}
-    \begin{flushright}
-        \href{mailto:dominiczirbel@gmail.com}{dominiczirbel@gmail.com} \\
-        \href{https://github.com/djynth}{github.com/djynth} \\
-        412 204 7462
-    \end{flushright}
-\end{minipage}
+\begin{flushright}
+    \textbf{\Large{Dominic Zirbel}} \\
+    \href{mailto:dominiczirbel@gmail.com}{dominiczirbel@gmail.com} \\
+    \href{https://github.com/djynth}{github.com/djynth} \\
+    412 204 7462
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%
+%%% EDUCATION %%%
+%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{resumecols2}{Carnegie Mellon University}{2013 - 2018 (Expected)}
+    BS in Mathematics with a second major in Computer Science
+    \lb
+    Cumulative GPA (as of Fall 2017): 3.31
+\end{resumecols2}
+
+\begin{resumecols2}{Bowling Green State University}{2009 - 2013}
+    Credits equivalent to a minor in Mathematics, earned during high school
+    \lb
+    Cumulative GPA: 4.0
+\end{resumecols2}
+
+%%%%%%%%%%%%%%%%%%
+%%% EXPERIENCE %%%
+%%%%%%%%%%%%%%%%%%
+\section{Experience}
+
+\begin{resumecols}{Thumbtack}{https://www.thumbtack.com/about}{Software Engineer Intern}{Summer 2017}
+    Rebuilt the login flow in the Thumbtack customer Android app from the ground up. I added account creation and Facebook login, modernized the UI, and ran experiments.
+    \lb
+    I was on the forefront of transitioning the app to a reactive paradigm with RxJava and translating Java code to Kotlin. I fleshed out existing solutions and added my own ideas, learning alongside the team and providing them with tools for the future.
+\end{resumecols}
+
+\begin{resumecols}{Imaging Systems Technology}{http://www.teamist.com}{Intern}{Summer 2016}
+    Developed an Android tablet app to monitor and control a manufacturing process. The app gathered live data via Bluetooth, calculated aggregates, displayed realtime graphs, and kept logs of past runs. I focused on handling large amounts of data in an extensible way and presenting the data in ways that facilitated the team's decision making.
+\end{resumecols}
+
+\begin{resumecols}{MetabolismFun}{http://metabolismfun.com}{Full-Stack Web Engineer}{July 2013 - Jan 2015}
+    Created the educational game MetabolismFun (\href{http://metabolismfun.com}{\texttt{metabolismfun.com}}) for Dr.\ Neocles Leontis at BGSU to teach metabolic pathways in an engaging, interactive way. I was responsible for programming, design, and deployment.
+\end{resumecols}
+
+\begin{resumecols}{Agile Oasis Technologies}{http://agileoasis.com}{Web Developer Intern}{Summer 2015, 2013}
+    Summer 2015:\ Developed the social network Project Qi (\href{http://www.projectqi.com}{\texttt{projectqi.com}}) aiming to connect users to non-profits. I built standard features such as a profile, feed, pictures, and groups and worked closely with the client to craft the experience he had in mind.
+    \lb
+    Summer 2013:\ Designed and built the frontend for a variety of contracted websites.
+\end{resumecols}
+
+\begin{resumecols}{Personal Robotics}{https://personalrobotics.ri.cmu.edu}{Intern}{Summer 2012}
+    Designed an Android tablet app for in-house use with the humanoid robot HERB. The app provided a simple interface for normally difficult tasks such as adjusting motor position, displaying sensor output, or sending a direct command.
+\end{resumecols}
 
 %%%%%%%%%%%%%%
 %%% SKILLS %%%
@@ -113,53 +153,5 @@
     Strong academic core with a focus on Abstract Algebra and Combinatorics \\
     Analytical thinking, problem solving, and abstract reasoning
 \end{resumecols1}
-
-%%%%%%%%%%%%%%%%%%
-%%% EXPERIENCE %%%
-%%%%%%%%%%%%%%%%%%
-\section{Experience}
-
-\begin{resumecols}{Thumbtack}{https://www.thumbtack.com/about}{Software Engineer Intern}{Summer 2017}
-    Rebuilt the login flow in the Thumbtack customer Android app from the ground up. I added account creation and Facebook login, modernized the UI, and ran experiments.
-    \lb
-    I was on the forefront of transitioning the app to a reactive paradigm with RxJava and translating Java code to Kotlin. I fleshed out existing solutions and added my own ideas, learning alongside the team and providing them with tools for the future.
-\end{resumecols}
-
-\begin{resumecols}{Imaging Systems Technology}{http://www.teamist.com}{Intern}{Summer 2016}
-    Developed an Android tablet app to monitor and control a manufacturing process. The app gathered live data via Bluetooth, calculated aggregates, displayed realtime graphs, and kept logs of past runs. I focused on handling large amounts of data in an extensible way and finding useful ways to present it to the team.
-\end{resumecols}
-
-\begin{resumecols}{MetabolismFun}{http://metabolismfun.com}{Full-Stack Web Engineer}{July 2013 - Jan 2015}
-    Created the educational game MetabolismFun (\href{http://metabolismfun.com}{\texttt{metabolismfun.com}}) which teaches metabolic pathways in an engaging, interactive way.
-    \lb
-    I worked one on one with Dr.\ Neocles Leontis at BGSU to develop the website for use in his classes and beyond. I was responsible for programming, design, and deployment and used Yii2, MySQL, and jQuery.
-\end{resumecols}
-
-\begin{resumecols}{Agile Oasis Technologies}{http://agileoasis.com}{Web Developer Intern}{Summer 2015, 2013}
-    Summer 2015:\ Developed the social network Project Qi (\href{http://www.projectqi.com}{\texttt{projectqi.com}}) aiming to connect users to non-profits. I built standard features such as a profile, feed, groups, and pictures and worked closely with the client to craft the experience he had in mind.
-    \lb
-    Summer 2013:\ Designed and built the frontend for a variety of contracted websites.
-\end{resumecols}
-
-\begin{resumecols}{Personal Robotics}{https://personalrobotics.ri.cmu.edu}{Intern}{Summer 2012}
-    Designed an Android tablet app for in-house use with the humanoid robot HERB. The app provided a simple interface for normally difficult tasks such as adjusting motor position, displaying sensor output, or sending a direct command.
-\end{resumecols}
-
-%%%%%%%%%%%%%%%%%
-%%% EDUCATION %%%
-%%%%%%%%%%%%%%%%%
-\section{Education}
-
-\begin{resumecols2}{Carnegie Mellon University}{2013 - 2018 (Expected)}
-    BS in Mathematics with a second major in Computer Science
-    \lb
-    Cumulative GPA (as of Fall 2017): 3.31
-\end{resumecols2}
-
-\begin{resumecols2}{Bowling Green State University}{2009-2013}
-    Took classes during high school equivalent to a Mathematics minor
-    \lb
-    Cumulative GPA: 4.0
-\end{resumecols2}
 
 \end{document}
