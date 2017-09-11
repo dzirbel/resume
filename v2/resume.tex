@@ -5,54 +5,55 @@
 \usepackage{geometry}
 \usepackage{titlesec}
 
-\geometry{letterpaper, portrait, margin=.75in}
+\geometry{letterpaper, portrait, margin=.8in}
 
 \setlength\parindent{0pt}
+\hyphenpenalty=10000
 
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{12pt}{8pt}
 
 % standard line break in content paragraph
-\newcommand{\lb}{\vspace{3pt} \\}
+\newcommand{\lb}{\vspace{4pt} \\}
 
 % TODO: consolidate these resumecols commands
 \newenvironment{resumecols1}[1]
 {
-    \vspace{.08cm}
-    \begin{minipage}[t]{.22\linewidth}
+    \vspace{.11cm}
+    \begin{minipage}[t]{.21\linewidth}
         \begin{flushright}
             \textsc{#1}
         \end{flushright}
     \end{minipage}
     \hspace{.005\linewidth}
-    \begin{minipage}[t]{.7625\linewidth}
+    \begin{minipage}[t]{.77\linewidth}
 }
 {
     \end{minipage}
-    \vspace{.08cm}
+    \vspace{.11cm}
 }
 
 \newenvironment{resumecols2}[2]
 {
-    \vspace{.08cm}
-    \begin{minipage}[t]{.22\linewidth}
+    \vspace{.11cm}
+    \begin{minipage}[t]{.21\linewidth}
         \begin{flushright}
             \textsc{#1} \\
             \small{#2}
         \end{flushright}
     \end{minipage}
     \hspace{.005\linewidth}
-    \begin{minipage}[t]{.7625\linewidth}
+    \begin{minipage}[t]{.77\linewidth}
 }
 {
     \end{minipage}
-    \vspace{.08cm}
+    \vspace{.11cm}
 }
 
 \newenvironment{resumecols}[4]
 {
-    \vspace{.08cm}
-    \begin{minipage}[t]{.22\linewidth}
+    \vspace{.11cm}
+    \begin{minipage}[t]{.21\linewidth}
         \begin{flushright}
             \href{#2}{\textsc{#1}} \\
             \small{\textit{#3}} \\
@@ -60,11 +61,11 @@
         \end{flushright}
     \end{minipage}
     \hspace{.005\linewidth}
-    \begin{minipage}[t]{.7625\linewidth}
+    \begin{minipage}[t]{.77\linewidth}
 }
 {
     \end{minipage}
-    \vspace{.08cm}
+    \vspace{.11cm}
 }
 
 \begin{document}
@@ -78,7 +79,7 @@
     \vspace{0pt}
     \textbf{\Large{Dominic Zirbel}}
 \end{minipage}
-\begin{minipage}[t]{.5\linewidth}
+\begin{minipage}[t]{.49\linewidth}
     \vspace{0pt}
     \begin{flushright}
         \href{mailto:dominiczirbel@gmail.com}{dominiczirbel@gmail.com} \\
@@ -125,21 +126,19 @@
 \end{resumecols}
 
 \begin{resumecols}{Imaging Systems Technology}{http://www.teamist.com}{Intern}{Summer 2016}
-    Developed an Android tablet app to monitor and control a manufacturing process in order to fine tune the system. The app gathered live data via Bluetooth; tracked averages, regressions, and errors; displayed realtime graphs; and kept logs of past runs.
-    \lb
-    I used the native Java SDK and focused on handling large amounts of data in an extensible way and finding useful ways to present it to the team.
+    Developed an Android tablet app to monitor and control a manufacturing process. The app gathered live data via Bluetooth, calculated aggregates, displayed realtime graphs, and kept logs of past runs. I focused on handling large amounts of data in an extensible way and finding useful ways to present it to the team.
 \end{resumecols}
 
 \begin{resumecols}{MetabolismFun}{http://metabolismfun.com}{Full-Stack Web Engineer}{July 2013 - Jan 2015}
     Created the online, turn-based educational game MetabolismFun (\href{http://metabolismfun.com}{\texttt{metabolismfun.com}}) which allows the player to learn metabolic pathways in an engaging, interactive way.
     \lb
-    I worked one-on-one with Dr. Neocles Leontis at BGSU to develop the website for teaching cellular metabolism in his classes and beyond. I was responsible for programming, design, and deployment and used Yii2, MySQL, and jQuery.
+    I worked one on one with Dr.\ Neocles Leontis at BGSU to develop the website for teaching cellular metabolism in his classes and beyond. I was responsible for programming, design, and deployment and used Yii2, MySQL, and jQuery.
 \end{resumecols}
 
 \begin{resumecols}{Agile Oasis Technologies}{http://agileoasis.com}{Web Developer Intern}{Summer 2015, 2013}
-    Summer 2015: Developed the social network Project Qi (\href{http://www.projectqi.com}{\texttt{projectqi.com}}) aiming to connect users to non-profits. I built standard features such as a profile, feed, groups, and pictures and worked closely with the client to craft the experience he had in mind.
+    Summer 2015:\ Developed the social network Project Qi (\href{http://www.projectqi.com}{\texttt{projectqi.com}}) aiming to connect users to non-profits. I built standard features such as a profile, feed, groups, and pictures and worked closely with the client to craft the experience he had in mind.
     \lb
-    Summer 2013: Designed and built the frontend for a variety of contracted websites.
+    Summer 2013:\ Designed and built the frontend for a variety of contracted websites.
 \end{resumecols}
 
 \begin{resumecols}{Personal Robotics}{https://personalrobotics.ri.cmu.edu}{Intern}{Summer 2012}
