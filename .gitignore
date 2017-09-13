@@ -4,3 +4,4 @@ node_modules
 /v1/src/cover_letters/*.html
 /v1/src/cover_letters/*.jade
 /v1/src/cover_letters/*.pdf
+/v2/cover_letters/*.pdf
