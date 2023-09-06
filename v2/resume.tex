@@ -7,7 +7,7 @@
 \usepackage{fontawesome}
 \usepackage{enumitem}
 
-\geometry{letterpaper, portrait, margin=.75in}
+\geometry{letterpaper, portrait, margin=.7in}
 
 \setlength\parindent{0pt}
 \hyphenpenalty=10000
@@ -15,72 +15,22 @@
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{6pt}{8pt}
 
-% standard line break in content paragraph
-\newcommand{\lb}{\vspace{4pt} \\}
+\newcommand{\nicetilde}{\raise.28ex\hbox{$\scriptstyle\sim$}}
 
-% TODO: consolidate these resumecols commands
-\newenvironment{resumecols1}[1]
+\newenvironment{lcol}
 {
-    \begin{minipage}[t]{.21\linewidth}
-        \begin{flushright}
-            \textsc{#1}
-        \end{flushright}
-    \end{minipage}
-    \hspace{.004\linewidth}
-    \begin{minipage}[t]{.775\linewidth}
+    \begin{minipage}[t]{.18\linewidth}
+    \begin{flushright}
 }
 {
+    \end{flushright}
     \end{minipage}
 }
 
-\newenvironment{resumecols2}[2]
+\newenvironment{rcol}
 {
-    \begin{minipage}[t]{.21\linewidth}
-        \begin{flushright}
-            \textsc{#1}
-            \lb
-            \small{#2}
-        \end{flushright}
-    \end{minipage}
-    \hspace{.004\linewidth}
-    \begin{minipage}[t]{.775\linewidth}
-}
-{
-    \end{minipage}
-}
-
-\newenvironment{resumecols}[4]
-{
-    \begin{minipage}[t]{.21\linewidth}
-        \begin{flushright}
-            \href{#2}{\textsc{#1}} \\
-            \lb
-            \small{\textit{#3}} \\
-            \small{#4}
-        \end{flushright}
-    \end{minipage}
-    \hspace{.004\linewidth}
-    \begin{minipage}[t]{.775\linewidth}
-}
-{
-    \end{minipage}
-}
-
-\newenvironment{resumecols6}[6]
-{
-    \begin{minipage}[t]{.21\linewidth}
-        \begin{flushright}
-            \href{#2}{\textsc{#1}} \\
-            \lb
-            \small{\textit{#3}} \\
-            \small{#4}
-            \lb
-            \small{\textit{#5}} \\
-            \small{#6}
-        \end{flushright}
-    \end{minipage}
-    \hspace{.004\linewidth}
-    \begin{minipage}[t]{.775\linewidth}
+    \hspace{.005\linewidth}
+    \begin{minipage}[t]{.8\linewidth}
 }
 {
     \end{minipage}
@@ -97,101 +47,134 @@
 \begin{flushright}
     \textbf{\Large{Dominic Zirbel}} \\
     \href{mailto:dominiczirbel@gmail.com}{dominiczirbel@gmail.com} \\
-    \href{https://github.com/dzirbel}{github.com/dzirbel}
+    \href{https://github.com/dzirbel}{\faicon{github} github.com/dzirbel}
 \end{flushright}
+
+\begin{lcol}
+    {\large{\textsc{Summary}}}
+\end{lcol}
+\begin{rcol}
+    Senior Android engineer with 5 years of experience and expertise in Kotlin, Compose, Android architecture, and Gradle
+\end{rcol}
 
 %%%%%%%%%%%%%%%%%%
 %%% EXPERIENCE %%%
 %%%%%%%%%%%%%%%%%%
 \section{Work Experience}
 
-\begin{resumecols6}{Thumbtack}{https://www.thumbtack.com/about}{Senior Software Engineer}{June 2018 - May 2023}{Software Engineer Intern}{Summer 2017}
-    Worked on the Growth and Platform teams as an Android engineer.
-    \begin{itemize}
-      \item Built features and ran A/B tests on the Kotlin Android apps and backend in Go/PHP/Python
-      \item Responsible for app architecture, CI/release pipelines, and developer productivity for the entire Android team
-      \item Conceived, planned, and drove adoption of new technologies including Compose, Navigation, and Coroutines, culminating in a new UI framework \href{https://medium.com/thumbtack-engineering/61a24e5e82b6}{\underline{Cork}}
-    \end{itemize}
-\end{resumecols6}
+\href{https://www.thumbtack.com/about}{\textsc{Thumbtack}} $\cdot$ \textit{Senior Software Engineer} $\cdot$ June 2018 -- May 2023
+\begin{itemize}[itemsep=2pt, parsep=0pt, partopsep=0pt]
+  \item On the Growth team (2018--20), I built features on the Kotlin Android apps and backend in Go/PHP/Python.
+  \item As the sole Android engineer on the Platform team (2020--23), I was responsible for app architecture, CI/release pipelines, build tools, and developer productivity across the Android team of \nicetilde15 engineers.
+  \item I conceived, planned, and drove adoption of new technologies including MVVM, Compose, Jetpack Navigation, and Coroutines, culminating in a new UI framework \href{https://medium.com/thumbtack-engineering/61a24e5e82b6}{\underline{Cork}}.
+  \item Mentoring, building team expertise, and encouraging best practices was a particular focus of mine.
+\end{itemize}
 
 \vspace{6pt}
 
-\begin{resumecols}{Imaging Systems Technology}{http://www.teamist.com}{Android Intern}{Summer 2016}
-    Developed an Android tablet app to monitor and control a manufacturing process.
-    \begin{itemize}
-      \item Received live data via Bluetooth, calculated aggregates, displayed realtime graphs, and kept logs of past runs
-      \item Handled large amounts of data in an extensible way
-      \item Facilitated the team's decision making
-    \end{itemize}
-\end{resumecols}
+\href{https://www.thumbtack.com/about}{\textsc{Thumbtack}} $\cdot$ \textit{Software Engineering Intern} $\cdot$ Summer 2017 \\
+\-\hspace{.28in} Rebuilt the login flow for Thumbtack's Android customer app in Kotlin and launched it as an A/B experiment
 
 \vspace{6pt}
 
-\begin{resumecols}{MetabolismFun \faicon{github}}{https://github.com/dzirbel/metabolism-fun}{Full-Stack Web Engineer}{July 2013 - Jan 2015}
-    Created the online educational game MetabolismFun with Dr.\ Neocles Leontis at \href{https://www.bgsu.edu/}{\underline{BGSU}} to teach metabolic pathways to college students in an engaging, interactive way. I was responsible for programming, design, and deployment.
-\end{resumecols}
+\textsc{Imaging Systems Technology} $\cdot$ \textit{Engineering Intern} $\cdot$ Summer 2016 \\
+\-\hspace{.28in} Developed an Android tablet app to monitor and control a manufacturing process via Bluetooth
 
 \vspace{6pt}
 
-\begin{resumecols}{Agile Oasis Technologies}{http://agileoasis.com}{Web Developer Intern}{Summers 2015 and 2013}
-    Designed and built a variety of contracted websites, and including a social network Project Qi connecting users to non-profits. I worked closely with clients to craft the experiences they had in mind.
-\end{resumecols}
+\href{http://agileoasis.com}{\textsc{Agile Oasis Technologies}} $\cdot$ \textit{Full-stack Intern} $\cdot$ Summers 2015 and 2013 \\
+\-\hspace{.28in} Full-stack design and engineering for a variety of contracted websites
 
 \vspace{6pt}
 
-\begin{resumecols}{Personal Robotics}{https://personalrobotics.cs.washington.edu}{Research Intern}{Summer 2012}
-    Designed an Android tablet app for in-house use with the humanoid robot \href{https://robotsguide.com/robots/herb}{\underline{HERB}}. The app provided a simple interface for normally difficult tasks such as adjusting motor position, displaying sensor output, or sending a direct command in \href{https://www.ros.org/}{\underline{ROS}}.
-\end{resumecols}
+\href{https://github.com/dzirbel/metabolism-fun}{\textsc{MetabolismFun} \faicon{github}} $\cdot$ \textit{Full-stack Contractor} $\cdot$ July 2013 -- Jan 2015 \\
+\-\hspace{.28in} Created an online educational game with Dr. Neocles Leontis at \href{https://www.bgsu.edu/}{\underline{BGSU}} to teach metabolic pathways
+
+\vspace{6pt}
+
+\href{https://personalrobotics.cs.washington.edu}{\textsc{Personal Robotics, CMU}} $\cdot$ \textit{Research Intern} $\cdot$ Summer 2012 \\
+\-\hspace{.28in} Built an Android tablet app to provide a simple interface for controlling the humanoid robot \href{https://robotsguide.com/robots/herb}{\underline{HERB}} via \href{https://www.ros.org/}{\underline{ROS}}
 
 %%%%%%%%%%%%%%%%
 %%% PROJECTS %%%
 %%%%%%%%%%%%%%%%
 \section{Projects}
 
-\begin{resumecols2}{\href{https://github.com/dzirbel/kotify}{Kotify \faicon{github}}}{2019 - Present}
-    A work-in-progress desktop client for Spotify via its \href{https://developer.spotify.com/documentation/web-api/}{web API} which I created and developed individually for enjoyment and practice. Built in Kotlin with \href{https://www.jetbrains.com/lp/compose-mpp/}{JetBrains's multiplatform bindings} for \href{https://developer.android.com/jetpack/compose}{Jetpack Compose}, the project aims to add new features on top of Spotify's platform to improve personal library organization for power users.
-\end{resumecols2}
+\begin{lcol}
+    \textsc{\href{https://github.com/dzirbel/kotify}{Kotify \faicon{github}}} \\
+    2019 - Present
+\end{lcol}
+\begin{rcol}
+    Desktop client for Spotify I created to improve library management for power users. Features include track ratings, genre organization, and improved performance with aggressive local caching. Built in Kotlin with \href{https://www.jetbrains.com/lp/compose-multiplatform/}{Compose Multiplatform} and Spotify's \href{https://developer.spotify.com/documentation/web-api/}{web API}.
+\end{rcol}
 
-\begin{resumecols1}{Open Source}
-    Contributed to open source projects including \href{https://github.com/detekt/detekt/issues?q=author\%3Adzirbel}{\underline{detekt}} and \href{https://github.com/willowtreeapps/assertk/issues?q=author\%3Adzirbel}{\underline{assertk}}
-\end{resumecols1}
+\vspace{6pt}
+
+\begin{lcol}
+    \textsc{Open Source}
+\end{lcol}
+\begin{rcol}
+    Contributed to open source projects including \href{https://github.com/detekt/detekt/issues?q=author\%3Adzirbel}{\underline{\faicon{github} detekt}} and \href{https://github.com/willowtreeapps/assertk/issues?q=author\%3Adzirbel}{\underline{\faicon{github} assertk}}
+    
+    \vspace{6pt}
+
+    Created and published open source libraries, including:
+    
+    \begin{itemize}[itemsep=2pt]
+      \item \href{https://github.com/dzirbel/compose-material-context-menu}{\faicon{github} \underline{compose-material-context-menu}}, an implementation of context (right-click) menus for Compose Multiplatform
+      \item \href{https://github.com/dzirbel/gson-bijectivereflection}{\faicon{github} \underline{gson-bijectivereflection}}, a library enforcing strict deserialization of JSON
+      \item \href{https://github.com/dzirbel/robopower}{\faicon{github} \underline{robopower}}, an engine and AI players for a simple card game
+    \end{itemize}
+\end{rcol}
 
 %%%%%%%%%%%%%%
 %%% SKILLS %%%
 %%%%%%%%%%%%%%
 \section{Skills}
 
-\begin{resumecols1}{Native Android Development}
-    Comprehensive knowledge of the native Java and Kotlin APIs and build tools \\
-    In-depth experience with modern architecture: MVVM, Compose, Navigation, Coroutines \\
-    Worked with industry standards, mature codebases, and millions of users
-\end{resumecols1}
+\begin{lcol}
+    \textsc{Android \faicon{android}}
+\end{lcol}
+\begin{rcol}
+    Comprehensive knowledge of the native Java and Kotlin APIs, build tools, and modern architecture components including MVVM, Compose, Jetpack Navigation, and Coroutines
+    \vspace{2pt} \\
+    Experience deploying and maintaining apps with millions of users
+\end{rcol}
 
 \vspace{6pt}
 
-\begin{resumecols1}{Programming}
-    Koltin/Java, Go, Rust, Python: solid foundation in the style and uses of these languages \\
-    Web development: GraphQL, Go, PHP, SQL, JavaScript, and HTML/CSS \\
-    Linux: daily usage of top-level components (CLI, Bash scripting, Git)
-\end{resumecols1}
+\begin{lcol}
+    \textsc{Programming}
+\end{lcol}
+\begin{rcol}
+    In-depth experience with Kotlin/Java; comfortable with Go, Rust, and Python
+    \vspace{2pt} \\
+    Full-stack experience: GraphQL, Go, PHP, SQL, JavaScript, and HTML/CSS
+    % \vspace{2pt} \\
+    % Linux: daily usage of top-level components (CLI, Bash scripting, Git)
+\end{rcol}
 
 \vspace{6pt}
 
-\begin{resumecols1}{Mathematics}
-    Strong academic core with a focus on Analysis, Combinatorics, and Abstract Algebra \\
-    Analytical thinking, problem solving, and abstract reasoning
-\end{resumecols1}
+\begin{lcol}
+    \textsc{Mathematics}
+\end{lcol}
+\begin{rcol}
+    Strong academic core with a focus on Analysis, Combinatorics, and Abstract Algebra
+\end{rcol}
 
 %%%%%%%%%%%%%%%%%
 %%% EDUCATION %%%
 %%%%%%%%%%%%%%%%%
 \section{Education}
 
-\begin{resumecols1}{Carnegie Mellon University}
+\begin{lcol}
+    \textsc{Carnegie Mellon University}
+\end{lcol}
+\begin{rcol}
     B.S. in Mathematical Sciences with an additional major in Computer Science
-    \lb
+    \vspace{4pt} \\
     Class of 2018; 3.41 Cumulative GPA
-\end{resumecols1}
+\end{rcol}
 
 \end{document}
-
