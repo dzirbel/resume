@@ -19,7 +19,7 @@
 
 \newenvironment{lcol}
 {
-    \begin{minipage}[t]{.18\linewidth}
+    \begin{minipage}[t]{.185\linewidth}
     \begin{flushright}
 }
 {
@@ -29,7 +29,6 @@
 
 \newenvironment{rcol}
 {
-    \hspace{.005\linewidth}
     \begin{minipage}[t]{.8\linewidth}
 }
 {
@@ -50,12 +49,12 @@
     \href{https://github.com/dzirbel}{\faicon{github} github.com/dzirbel}
 \end{flushright}
 
-\begin{lcol}
+\begin{minipage}[t]{.115\linewidth}
     {\large{\textsc{Summary}}}
-\end{lcol}
-\begin{rcol}
-    Senior Android engineer with 5 years of experience and expertise in Kotlin, Compose, Android architecture, and Gradle
-\end{rcol}
+\end{minipage}
+\begin{minipage}[t]{.875\linewidth}
+    Senior Android engineer with expertise in Kotlin, Compose, Android architecture, and Gradle
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%
 %%% EXPERIENCE %%%
@@ -101,7 +100,7 @@
 \section{Projects}
 
 \begin{lcol}
-    \textsc{\href{https://github.com/dzirbel/kotify}{Kotify \faicon{github}}} \\
+    \textsc{\href{https://github.com/dzirbel/kotify}{\faicon{github} Kotify}} \\
     2019 - Present
 \end{lcol}
 \begin{rcol}
@@ -116,14 +115,14 @@
 \begin{rcol}
     Contributed to open source projects including \href{https://github.com/detekt/detekt/issues?q=author\%3Adzirbel}{\underline{\faicon{github} detekt}} and \href{https://github.com/willowtreeapps/assertk/issues?q=author\%3Adzirbel}{\underline{\faicon{github} assertk}}
     
-    \vspace{6pt}
+    \vspace{4pt}
 
     Created and published open source libraries, including:
     
     \begin{itemize}[itemsep=2pt]
       \item \href{https://github.com/dzirbel/compose-material-context-menu}{\faicon{github} \underline{compose-material-context-menu}}, an implementation of context (right-click) menus for Compose Multiplatform
       \item \href{https://github.com/dzirbel/gson-bijectivereflection}{\faicon{github} \underline{gson-bijectivereflection}}, a library enforcing strict deserialization of JSON
-      \item \href{https://github.com/dzirbel/robopower}{\faicon{github} \underline{robopower}}, an engine and AI players for a simple card game
+      \item \href{https://github.com/dzirbel/robopower}{\faicon{github} \underline{robopower}}, an engine and heuristic-based AI players for a simple card game
     \end{itemize}
 \end{rcol}
 
@@ -133,11 +132,11 @@
 \section{Skills}
 
 \begin{lcol}
-    \textsc{Android \faicon{android}}
+    \textsc{\faicon{android} Android}
 \end{lcol}
 \begin{rcol}
     Comprehensive knowledge of the native Java and Kotlin APIs, build tools, and modern architecture components including MVVM, Compose, Jetpack Navigation, and Coroutines
-    \vspace{2pt} \\
+    \vspace{4pt} \\
     Experience deploying and maintaining apps with millions of users
 \end{rcol}
 
@@ -148,10 +147,8 @@
 \end{lcol}
 \begin{rcol}
     In-depth experience with Kotlin/Java; comfortable with Go, Rust, and Python
-    \vspace{2pt} \\
+    \vspace{4pt} \\
     Full-stack experience: GraphQL, Go, PHP, SQL, JavaScript, and HTML/CSS
-    % \vspace{2pt} \\
-    % Linux: daily usage of top-level components (CLI, Bash scripting, Git)
 \end{rcol}
 
 \vspace{6pt}
