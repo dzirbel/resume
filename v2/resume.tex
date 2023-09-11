@@ -6,8 +6,9 @@
 \usepackage{titlesec}
 \usepackage{fontawesome}
 \usepackage{enumitem}
+\usepackage{svg}
 
-\geometry{letterpaper, portrait, margin=.7in}
+\geometry{letterpaper, portrait, margin=.75in}
 
 \setlength\parindent{0pt}
 \hyphenpenalty=10000
@@ -16,6 +17,7 @@
 \titlespacing{\section}{0pt}{6pt}{8pt}
 
 \newcommand{\nicetilde}{\raise.28ex\hbox{$\scriptstyle\sim$}}
+\newcommand{\mediumlogo}{\hspace{.75mm}\raisebox{-.15\height}{\includesvg[height=8pt]{medium-icon.svg}}\hspace{1mm}}
 
 \newenvironment{lcol}
 {
@@ -61,12 +63,12 @@
 %%%%%%%%%%%%%%%%%%
 \section{Work Experience}
 
-\href{https://www.thumbtack.com/about}{\textsc{Thumbtack}} $\cdot$ \textit{Senior Software Engineer} $\cdot$ June 2018 -- May 2023
+\href{https://www.thumbtack.com/about}{\textsc{Thumbtack}} $\cdot$ \textit{Senior Software Engineer} $\cdot$ June 2018 -- May 2023 (5 years)
 \begin{itemize}[itemsep=2pt, parsep=0pt, partopsep=0pt]
   \item On the Growth team (2018--20), I built features on the Kotlin Android apps and backend in Go/PHP/Python.
   \item As the sole Android engineer on the Platform team (2020--23), I was responsible for app architecture, CI/release pipelines, build tools, and developer productivity across the Android team of \nicetilde15 engineers.
-  \item I conceived, planned, and drove adoption of new technologies including MVVM, Compose, Jetpack Navigation, and Coroutines, culminating in a new UI framework \href{https://medium.com/thumbtack-engineering/61a24e5e82b6}{\underline{Cork}}.
-  \item Mentoring, building team expertise, and encouraging best practices was a particular focus of mine.
+  \item I conceived, planned, and drove adoption of new technologies including MVVM, Compose, Jetpack Navigation, and Coroutines, culminating in a new UI framework \href{https://medium.com/thumbtack-engineering/61a24e5e82b6}{\mediumlogo \underline{Cork}}.
+  \item With a promotion to Senior Software Engineer in September 2021 I focused in particular on mentoring, building team expertise, and encouraging best practices.
 \end{itemize}
 
 \vspace{6pt}
@@ -135,8 +137,7 @@
     \textsc{\faicon{android} Android}
 \end{lcol}
 \begin{rcol}
-    Comprehensive knowledge of the native Java and Kotlin APIs, build tools, and modern architecture components including MVVM, Compose, Jetpack Navigation, and Coroutines
-    \vspace{4pt} \\
+    Comprehensive knowledge of the native Java and Kotlin APIs, build tools, and modern architecture components including MVVM, Compose, Jetpack Navigation, and Coroutines\vspace{4pt} \\
     Experience deploying and maintaining apps with millions of users
 \end{rcol}
 
@@ -165,13 +166,7 @@
 %%%%%%%%%%%%%%%%%
 \section{Education}
 
-\begin{lcol}
-    \textsc{Carnegie Mellon University}
-\end{lcol}
-\begin{rcol}
-    B.S. in Mathematical Sciences with an additional major in Computer Science
-    \vspace{4pt} \\
-    Class of 2018; 3.41 Cumulative GPA
-\end{rcol}
+\textsc{Carnegie Mellon University} $\cdot$ Class of 2018 \\
+\-\hspace{.28in} B.S. in Mathematical Sciences with an additional major in Computer Science
 
 \end{document}
